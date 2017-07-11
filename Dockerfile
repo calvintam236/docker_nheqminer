@@ -10,6 +10,7 @@ RUN apt-get update \
 RUN wget --content-disposition https://github.com/nicehash/nheqminer/releases/download/0.5c/Ubuntu_16_04_x64_cuda_djezo_avx_nheqminer-5c.zip \
     && unzip -j Ubuntu_16_04_x64_cuda_djezo_avx_nheqminer-5c.zip \
     && rm Ubuntu_16_04_x64_cuda_djezo_avx_nheqminer-5c.zip \
-    && mv nheqminer_16_04 /usr/local/bin/nheqminer
+    && mv nheqminer_16_04 /usr/local/bin/nheqminer \
+    && chmod a+x /usr/local/bin/nheqminer
 
 ENTRYPOINT ["nheqminer"]
