@@ -4,20 +4,18 @@ nheqminer is the console miner provided by [NiceHash](https://github.com/nicehas
 
 nheqminer supports Zcash (ZEC).
 
-![logo](https://scontent.cdninstagram.com/t51.2885-19/s150x150/11939576_895926810497744_2081713499_a.jpg)
-
 # How to use this image
 
 Run in background:
 
 ```console
-$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/nheqminer -user YOUR_EMAIL -CURRENCY
+$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/nheqminer -l YOUR_POOL_ADDRESS -u YOUR_BTC_ADDRESS_HERE.worker1
 ```
 
 Get nheqminer options with:
 
 ```console
-$ docker run --rm calvintam236/nheqminer -help
+$ docker run --rm calvintam236/nheqminer -h
 ```
 
 Fetch logs of a container:
