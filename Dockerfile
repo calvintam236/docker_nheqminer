@@ -13,6 +13,8 @@ RUN apt-get update \
     && mv nheqminer_16_04 /usr/local/bin/nheqminer \
     && chmod a+x /usr/local/bin/nheqminer \
     && apt-get -y remove ca-certificates curl unzip \
-    && rm -r /var/lib/apt/lists/*
+    && apt-get -y autoremove \
+    && apt-get clean autoclean \
+    && rm -r /var/lib/{apt,dpkg,cache,log}/
 
 ENTRYPOINT ["nheqminer"]
