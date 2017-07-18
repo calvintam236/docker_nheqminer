@@ -15,6 +15,6 @@ RUN apt-get update \
     && apt-get -y remove ca-certificates curl unzip \
     && apt-get -y autoremove \
     && apt-get clean autoclean \
-    && rm -r /var/lib/{apt,dpkg,cache,log}/
+    && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 ENTRYPOINT ["nheqminer"]
