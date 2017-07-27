@@ -6,13 +6,19 @@ nheqminer supports Zcash (ZEC).
 
 # How to use this image
 
-Run in background:
+Run in background with CPU mining:
 
 ```console
 $ docker run -d --name YOUR_CONTAINER_NAME calvintam236/nheqminer -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
 ```
 
-Get nheqminer options with:
+Run in background with Nvidia (CUDA) GPU mining:
+
+```console
+$ docker run -d --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --name YOUR_CONTAINER_NAME calvintam236/nheqminer -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
+```
+
+Get `nheqminer` options with:
 
 ```console
 $ docker run --rm calvintam236/nheqminer -h
