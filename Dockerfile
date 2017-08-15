@@ -19,7 +19,7 @@ RUN apt-get update \
     && make -j $(nproc) \
     && mv nheqminer_AMD /usr/local/bin/nheqminer \
     && chmod a+x /usr/local/bin/nheqminer \
-    && cd .... \
+    && cd ../.. \
     && rm -r nheqminer \
     && apt-get -y remove ca-certificates curl bzip2 lsb-release git build-essential cmake libboost-all-dev mesa-common-dev \
     && apt-get -y autoremove \
