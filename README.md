@@ -2,26 +2,20 @@
 
 nheqminer is the console miner provided by [NiceHash](https://github.com/nicehash/nheqminer).
 
-nheqminer supports Zcash (ZEC).
+nheqminer supports Equihash.
 
-# How to use this image
+# How to use this image [AMDGPU-PRO version]
 
-Run in background with CPU mining:
-
-```console
-$ docker run -d --name YOUR_CONTAINER_NAME calvintam236/nheqminer -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
-```
-
-Run in background with Nvidia (CUDA) GPU mining:
+Run in background:
 
 ```console
-$ docker run -d --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --name YOUR_CONTAINER_NAME calvintam236/nheqminer -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
+$ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/nheqminer:amdgpu-pro -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
 ```
 
 Get `nheqminer` options with:
 
 ```console
-$ docker run --rm calvintam236/nheqminer -h
+$ docker run --rm calvintam236/nheqminer --help
 ```
 
 Fetch logs of a container:
