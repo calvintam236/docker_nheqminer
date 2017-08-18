@@ -21,7 +21,7 @@ RUN apt-get update \
     && chmod a+x /usr/local/bin/nheqminer \
     && cd ../.. \
     && rm -r nheqminer \
-    && apt-get -y remove ca-certificates curl bzip2 lsb-release git build-essential cmake libboost-all-dev mesa-common-dev \
+    && apt-get -y remove ca-certificates curl bzip2 lsb-release git build-essential cmake mesa-common-dev \
     && apt-get -y autoremove \
     && apt-get clean autoclean \
     && rm -rf /var/lib/{apt,dpkg,cache,log}

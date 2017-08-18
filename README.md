@@ -15,7 +15,7 @@ $ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam2
 Get `nheqminer` options with:
 
 ```console
-$ docker run --rm calvintam236/nheqminer --help
+$ docker run --rm calvintam236/nheqminer:amdgpu-pro -h
 ```
 
 Fetch logs of a container:
