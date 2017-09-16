@@ -1,7 +1,7 @@
 FROM calvintam236/ubuntu:nvidia
 
 MAINTAINER calvintam236 <calvintam236@users.noreply.github.com>
-LABEL description="nheqminer in Docker. Supports GPU mining."
+LABEL description="nheqminer in Docker. Supports CPU & GPU mining."
 
 WORKDIR /tmp
 
