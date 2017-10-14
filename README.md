@@ -9,7 +9,7 @@ nheqminer supports Equihash.
 Run in background:
 
 ```console
-$ docker run -d --device /dev/nvidia0:/dev/nvidia0 --device /dev/nvidiactl:/dev/nvidiactl --device /dev/nvidia-uvm:/dev/nvidia-uvm --name YOUR_CONTAINER_NAME calvintam236/nheqminer:nvidia -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
+$ docker run -d --device /dev/nvidia0 --device /dev/nvidiactl --device /dev/nvidia-uvm --name YOUR_CONTAINER_NAME calvintam236/nheqminer:nvidia -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
 ```
 
 Get `nheqminer` options with:
