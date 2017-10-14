@@ -11,7 +11,7 @@ RUN apt-get update \
     && cd nheqminer \
     && mkdir build \
     && cd build \
-    && LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64:/usr/local/cuda-8.0/lib64/stubs" cmake ../../nheqminer -DUSE_CPU_XENONCAT=OFF -DCUDA_CUDART_LIBRARY=/usr/local/cuda/lib64/libcudart.so \
+    && LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64:/usr/local/cuda-9.0/lib64/stubs" cmake ../../nheqminer -DUSE_CPU_XENONCAT=OFF -DCUDA_CUDART_LIBRARY=/usr/local/cuda/lib64/libcudart.so \
     && make -j $(nproc) \
     && mv nheqminer /usr/local/bin/nheqminer \
     && chmod a+x /usr/local/bin/nheqminer \
