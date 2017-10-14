@@ -9,7 +9,7 @@ nheqminer supports Equihash.
 Run in background:
 
 ```console
-$ docker run -d --device /dev/dri:/dev/dri --name YOUR_CONTAINER_NAME calvintam236/nheqminer:amd -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
+$ docker run -d --device /dev/kfd --device /dev/dri --name YOUR_CONTAINER_NAME calvintam236/nheqminer:amd -l YOUR_POOL_ADDRESS -u YOUR_USERNAME.YOUR_WORKER_NAME
 ```
 
 Get `nheqminer` options with:
